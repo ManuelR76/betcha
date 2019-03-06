@@ -1,0 +1,1025 @@
+/*
+ GENERAL
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+/*PRELOADING------------ */
+
+#overlayer {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    background: black;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index:3;
+    border: 4px solid #FF8D12;
+    top: 50%;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #FF8D12;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+/*Index*/
+/* MAIN IMAGE */
+
+.main-image {
+    display: flex;
+    height: 100vh;
+    background: url('../images/celebration.jpg') top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 100px;
+    border-bottom: 3px solid #FF8D12;
+    background-size: cover;
+}
+
+.introduction {
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+.main-image h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #EFEFEF;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    margin-left: 0px;
+    text-align: justify;
+    text-shadow: 1px 1px white;
+}
+
+.main-image .icons {
+    margin-top: 50px;
+    color: dimgrey;
+}
+
+.main-image #centerIcon {
+    padding: 0px 15px;
+}
+
+.connexion {
+    align-items: center;
+}
+
+.connexionButton {
+    align-items: center;
+    background: transparent;
+    height: 30px;
+    width: 100px;
+    margin-top: 110px;
+    margin-bottom: 5px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 0.8em;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: normal;
+    opacity: .10;
+    animation: pulse 2s linear alternate infinite;
+    border: 2px solid #FF8D12;
+    border-radius: 100px;
+}
+
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
+.connexionButton:hover{
+    cursor: pointer;
+    color: #fff;
+    background: #FF8D12;
+}
+
+.rules {
+    align-items: center;
+}
+
+button.rulesButton {
+    font-size: 0.8em;
+    align-items: center;
+    background: transparent;
+    border: none;
+    margin-top: 60px;
+    color: dimgrey;
+    opacity: 0.8;
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
+}
+
+button.rulesButton:hover {
+    cursor: pointer;
+}
+
+/* Bouton Connexion Formulaire */
+
+.connexion a {
+    color: #FF8D12;
+}
+
+.connexion a.nav-link{
+    color: dimgrey;
+}
+
+.connexion a.nav-link.active{
+    color: #FF8D12;
+}
+
+.connexion label {
+    color: #fff;
+    margin-top: 5px;
+}
+.connexion .btn.btn-info {
+    color: #fff;
+    background: #FF8D12;
+    border-color: dimgrey;
+    box-shadow: 4px 4px 4px #2d2c2a;
+}
+
+.connexion .btn.btn-info:hover {
+    background: orange;
+}
+
+.connexion .btn-outline-info {
+    color: #FF8D12;
+    border-color: #FF8D12;
+}
+
+.connexion .btn-outline-info:hover {
+    color: #fff;
+    background: #FF8D12;
+}
+
+a#link{
+    color: #EFEFEF;
+    font-size: 0.8em;
+}
+
+a#link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*modal*/
+
+#rulesModal {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-body {    
+    background-color: white;
+}
+
+.modal-backdrop {
+    position:inherit;
+}
+
+.modal a {
+    color: black;
+}
+
+.modal h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.modal h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.modal p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color: black;
+}
+
+.modal li {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color: black;
+}
+
+/*FORMS*/
+
+a:hover {
+    color: #3144a2;
+}
+
+#LoginForm { 
+    display: flex;
+    height: 100vh;
+    background: url('../images/stade.jpg') top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    border-bottom: 3px solid #FF8D12;
+    background-size: cover;
+}
+
+#LoginConnexion { 
+    display: flex;
+    height: 100vh;
+    background: url('../images/stade.jpg') top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    border-bottom: 3px solid #FF8D12;
+    background-size: cover;
+}
+
+h1#connexionTitle {
+    font-size: 26px;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.panel h2 { 
+    color: white; 
+    font-size:18px; 
+    font-family: 'Montserrat', sans-serif;
+}
+.panel p {
+    color: white; 
+    font-size:14px; 
+    margin-bottom:10px; 
+    line-height:20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.switch a { 
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-form .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group label.active {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px;
+}
+
+.main-div {   
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 2px;
+    margin: 30px auto 56px;
+    max-width: 38%;
+    padding: 30px 70px 30px 70px;
+}
+
+.login-form .main-div {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin: 30px auto 56px;
+    max-width: 38%;
+    padding: 30px 70px 30px 70px;
+    height:480px;
+    overflow-y: scroll;
+}
+
+#connexionTitle {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.connexionLink a {
+    color: #fff;
+}
+
+.login-form .form-group {
+    margin-bottom:10px;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0px; 
+    color: white;
+}
+
+.login-form{ 
+    text-align:center;
+}
+
+.forgot a {
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+    background: linear-gradient(#44c5f9,#3144a2);
+    border-color: #3144a2;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.btn:focus, .btn:hover {
+    text-decoration: underline;
+}
+
+.forgot {
+    text-align: left; 
+    margin-bottom:10px;
+}
+
+.forgot a:hover {
+    color: #3144a2;
+}
+
+.switch {
+    text-align: left; 
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.switch:hover {
+    cursor: pointer;
+}
+
+.switch a:hover{
+    color: #3144a2;
+}
+
+.bottom-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+    background: #ff9900 none repeat scroll 0 0;
+}
+.back { 
+    text-align: left; 
+    margin-top:10px;
+}
+.back a {       
+    color: #444444; 
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.connexionLink {
+    margin: auto;
+    border: 1px solid;
+    padding: 12px;
+    width: 150px;
+    background: linear-gradient(#44c5f9,#3144a2);
+    border-color: #3144a2;
+}
+
+.connexionLink:hover {
+    cursor: pointer;
+    background-color: buttonface;
+}
+
+.connexionLink a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/*RESET*/
+
+.backPage {
+    margin-left: 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.backPage a {
+    text-decoration: underline;
+}
+
+/*HOME PAGE*/
+
+.home-image {
+    display: flex;
+    height: auto;
+    background-image: url('../images/stadium.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+/*    border-bottom: 3px solid #FF8D12;*/
+    background-size: cover;
+}
+
+.home-image .navbar {
+    height: 50px;
+    width:100%;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.dropdown-item:hover{
+    text-decoration: underline;
+}
+
+.dropdown-menu {        
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.alert {
+    background: rgba(0, 0, 0, 0.5)
+}
+
+a .nav-link {
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.naviguation {
+    margin: 5px 15px 0px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.navbar .dropdown-menu {
+    border: none;   
+    align-items: center;
+    text-align: center;
+    margin-left: -15px;
+}
+
+.navbar .dropdown-menu a {
+    color: #fff;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-nav {
+    position: absolute;
+    z-index: 2;
+}
+
+.home-image p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+a.navbar { 
+    color: white; 
+    text-decoration: none; }
+
+.nav-link:hover {
+    background: silver;
+}
+
+.arrow {
+    display: none;
+    text-align: center;
+    margin: 8% 0;
+}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+a#profilLink {
+    color: #fff;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.logout {
+    float: right;
+}
+
+/*Carousel*/
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    word-wrap: break-word;
+}
+
+.welcome {
+    text-align: center;
+    border-radius: 2px;
+}
+
+.home-image h1 {
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.home-image #hello img {
+    vertical-align: inherit;
+    margin-left: 10px;
+    margin-bottom: 0px;
+} 
+
+.carousel-item {
+    height: 325px;
+}
+
+.rgba-gradient {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.message {
+    /*    padding: 5px;*/
+    height: 130px;
+}
+
+.h3-responsive {
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.carousel-caption p {
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.generalIntroduction {
+    margin-bottom: 10px;
+    height: 330px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.carousel-text-sm {
+    display: none;
+}
+
+.vignette {
+    margin-top: 40px;
+}
+
+.vignette h2 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+}
+
+.text-center {
+    color: #fff;
+}
+
+.text-info {
+    color: #fff;
+}
+
+th {
+    color: #fff;
+}
+
+td {
+    color: #fff;
+}
+
+/*PROFIL*/
+
+.profilPage {
+    height: auto;
+}
+
+h1.profil  {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.card-body label {
+    color: #fff;
+}
+
+input#photo {
+    color: #fff;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+
+.homePage {
+    padding-bottom: 30px;
+}
+
+#basicExampleModal {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.bold {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.modifyButton {
+    margin-top: 35px;
+}
+
+a#modifyLinkButton {
+
+    border: 1px solid;
+    padding: 12px 30px;
+    border-radius: 10px;
+    background: linear-gradient(#44c5f9,#3144a2);
+    border-color: #3144a2;
+}
+
+/*UPDATE PROFIL*/
+
+#text {
+    display: none;
+}
+
+.updatePage {
+    height: auto;
+}
+
+/*PASSWORD*/
+
+.passwordPage {
+    height: 100vh;
+}
+
+/*RULES*/
+
+.rulesPage {
+    height: 100%;
+}
+
+#rules h2 {
+    color: #fff;
+}
+
+#rules li {
+    color: #fff;
+    text-align: justify;
+}
+
+#rules p {
+    color: #fff;
+    text-align: justify;
+}
+/*
+PLAYERS 
+*/
+
+.players {
+    height: 100vh;
+}
+
+h1.titre-evenement {
+    margin-bottom: 10px;
+}
+
+.players img {
+    color: #fff;
+}
+
+.media-body {
+    color: #fff;
+    list-style: none;
+}
+
+.media-body li {
+    list-style: none;
+}
+
+/*SCORES*/
+
+.score {
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+.matchs {
+    height: auto;
+} 
+
+.displayMatchs {
+    margin-top: 15px;
+}
+
+p.matchDate {
+    color: yellowgreen;
+    margin-bottom: 5px;
+}
+
+p.error {
+    color: red;
+}
+
+.hyphen {
+    color: #fff;
+} 
+
+/*BET*/
+
+
+.betInput {
+    width: 60px;
+    margin: 0px 10px 25px;
+}
+
+.betButton {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.modifyBetButton
+
+p.success {
+    color: green;
+}
+
+/*BET LIST*/
+
+.middleTitle {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+/*DELETE*/
+
+.deletePage {
+    height: 100vh;
+}
+
+.deletePage h2 {
+    color: #fff;
+}
+
+/*
+ MEDIA QUERIES
+*/
+
+@media only screen and (max-width: 1050px) {
+    .welcome h1 {
+        font-size: 10vw;
+    }
+    .introduction {
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+    .main-image {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .main-image .logo {
+        margin-left: auto;
+        text-align: center;
+    }
+    .main-image img {
+        height: 75px;
+        width: 230px;
+    }
+    .main-image h1 {
+        margin-top: 20px;
+        margin-left: auto;
+        text-align: center;
+        font-size: 1.1em;
+        text-shadow: 1px 1px black;
+    }
+    .main-image .icons {
+        text-align: center;
+        margin-left: auto;
+        margin-top: 30px;
+        text-shadow: 1px 1px black;
+    }
+    .connexionButton {
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+    button.rulesButton {
+        margin-top: 30px;
+    }
+    .login-form .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 20px auto 20px;
+        max-width: 100%;
+        padding: 20px 20px 10px 20px;
+    }
+    #LoginForm { 
+        height: auto;
+    }
+    #LoginConnexion { 
+        height: auto;
+    }
+    .welcome h1 {
+        font-size: 18px;
+        padding-bottom: 20px;
+        margin-bottom: 60px;
+    }
+    .welcome img {
+        margin-top: 20px;
+        height: 70px;
+        width: 200px;
+    }
+    home-image {
+        height: 100%;
+        background-size: cover;
+    }
+    .navbar-nav {
+        background: rgba(0, 0, 0, 0.9); 
+        margin: 0px auto;
+        padding: 10px;
+    }
+    .nav-item {
+        margin-left: 50px;
+        /*        text-transform: uppercase;*/
+    }
+    .navbar .dropdown-menu {
+        margin-left: -50px;
+    }
+    .navbar .dropdown-menu a{
+        color: white;
+        font-size: 12px;
+    }
+    .navbar .dropdown-menu a:hover{
+        background-color: transparent; 
+        text-decoration: underline;       
+    }
+    .navbar-expand-lg .navbar-collapse {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .nav-item{
+        margin-left: 40px;
+    }
+    .naviguation {
+        margin-right: 65px;
+    }
+    .home-image #hello img {
+
+    } 
+    .arrow {
+        display: block;
+        margin-bottom: 40px;
+    }
+    .card-body {
+        padding: 0px;
+    }
+    .rgba-gradient {
+        background: rgba(0, 0, 0, 0.2);
+    }   
+    .message {
+        height: 80px;
+        margin-top: 80px;
+        margin-bottom: 140px;
+    }
+    .message h1 {
+        font-size: 5vh;
+    }
+    .home-image #hello img {
+        margin: 10px auto;
+        height: 32px;
+        width: 130px;    
+    }
+    .vignette h2 {
+        font-size: 5vw;
+    }
+    .generalIntroduction {
+        display: none;
+    }
+    .carousel-text-sm {
+        display: block;
+    }
+    .text-block-sm {
+        color: #fff;
+    }
+    h1.profil {
+        font-size: 5vh;
+    }
+    h1.password {
+        font-size: 5vh;
+    }
+    h1.titre-evenement{
+        font-size: 5vh;
+    }
+    h1.rules {
+        font-size: 5vh;
+    }
+    input#photo {
+        margin-left: -50px;
+        font-size: 14px;
+    }
+    .help-block {
+        font-size: 12px;
+    }
+    .connexionLink {
+        margin-bottom: 200px;
+    }
+    .passwordPage {
+    height: 100%;
+    }
+}
+
