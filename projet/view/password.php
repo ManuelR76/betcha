@@ -52,7 +52,7 @@ require '../template/header.php';
 
                                                 <div class="form-group">
                                                     <div class="col-lg-12 col-md-offset-3">
-                                                        <button name="reset" type="reset" class="btn btn-default">Effacer</button>
+                                                        <button name="reset" type="reset" class="btn btn-danger">Effacer</button>
                                                         <button name="submit" type="submit" class="btn btn-primary">Modifier</button>
                                                     </div>
                                                 </div>

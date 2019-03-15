@@ -21,6 +21,7 @@ require '../template/header.php';
                                     <h1 class="titre-evenement">8ème de finale - Ligue des Champions</h1>
                                     <p>Veuillez pronostiquer les matchs à venir</p>
                                     <div class="displayMatchs">
+                                        <!--Affichage message ajout pari-->
                                         <?php if ($addBetSuccess) { ?>
                                             <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
                                                 <strong>Pari enregistré ! Vous pouvez parier sur les autres matchs.</strong> 
@@ -28,7 +29,8 @@ require '../template/header.php';
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                        <?php } ?>   
+                                        <?php } ?>
+                                        <!--Formulaire pari-->
                                         <form method="POST" action="">
                                             <?php foreach ($matchsList AS $matchs) { ?>
                                                 <p class="matchDate"><?= $matchs->date; ?> <?= $matchs->hour; ?></p>

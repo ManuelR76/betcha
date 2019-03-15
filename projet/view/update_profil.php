@@ -1,10 +1,8 @@
 <?php
 session_start();
-//On appelle le controleur permettant de montrer le profil de l'utilisateur
 require '../controller/controller_profil_user.php';
 ?>
 <?php
-//On appelle via un require le template de header
 require '../template/header.php';
 ?>
 <body> 
@@ -82,23 +80,6 @@ require '../template/header.php';
                                                 <a href="delete_profil.php"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Supprimer mon compte</button></a>
 
                                             </div>
-                                            <!--                                            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                                                                             aria-hidden="true">
-                                                                                            <div class="modal-dialog" role="document">
-                                                                                                <div class="modal-content">
-                                                                                                    <div class="modal-header">
-                                                                                                        <h5 class="modal-title" id="exampleModalLabel">Etes-vous sûr de vouloir supprimer votre profil ?</h5>
-                                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                                            <span aria-hidden="true">&times;</span>
-                                                                                                        </button>
-                                                                                                    </div>
-                                                                                                    <div class="modal-footer">
-                                                                                                        <button name="removeConfirmation" type="button" class="btn btn-danger"><i class="fas fa-check"></i> Confirmer</button>
-                                                                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fas fa-times"></i> Annuler</button>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>-->
                                         </div>
                                     </fieldset>
                                 </form>

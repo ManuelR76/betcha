@@ -126,42 +126,21 @@ require '../template/header.php';
                                             <th width="10%" class="text-center text-info">Pts</th>
                                         </tr>
                                     </thead>
+                                    <?php foreach ($playersList AS $player) { ?>
                                     <tbody>
-                                        <tr>
-                                            <td class="text-center"><span class="glyphicon glyphicon-star"></span></td>
-                                            <td  class="text-center">kaiseur</td>
-                                            <td>Gwenael Le Meur</td>
-                                            <td class="text-center text-info">286</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">2</td>
-                                            <td  class="text-center">7NationArmy</td>
-                                            <td>Bruno Bernard</td>
-                                            <td class="text-center text-info">282</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">3</td>
-                                            <td  class="text-center">Tiri14</td>
-                                            <td>Eric Lobstein</td>
-                                            <td class="text-center text-info">263</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">4</td>
-                                            <td  class="text-center">Franz</td>
-                                            <td>Franz Vincent</td>
-                                            <td class="text-center text-info">259</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">5</td>
-                                            <td  class="text-center">Luckyloser</td>
-                                            <td>Manuel Romero</td>
-                                            <td class="text-center text-info">241</td>
-                                        </tr>
+                                    <tr>
+                                                <td class="text-center"><?= $player->id_user; ?></td>
+                                                <td class="text-center"><?= $player->alias; ?></td>
+                                                <td class="text-center"><?= $player->lastname . ' ' . $player->firstname; ?></td>                                     
+                                                <td class="text-center text-info">0</td>
+                                                
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                                 <p>
-                                    <a href="/classement/general">
-                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> classement complet
+                                    <a href="ranking.php">
+                                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true">classement complet</span> 
                                     </a>
                                 </p>
                             </div>

@@ -1,9 +1,6 @@
 <?php
 session_start();
-require '../controller/controller_players.php';
-?>
-<!DOCTYPE html>
-<?php
+require '../controller/controller_ranking.php';
 require '../template/header.php';
 ?>
 <body> 
@@ -22,26 +19,26 @@ require '../template/header.php';
                             <div class="well bs-component">
                                 <div class="col-md-12">
                                     <div class="col-lg-12 col-sm-12 justify-content-center">
-                                        <h1 class="titre-evenement">La fiche des joueurs</h1>·                            
+                                        <h1 class="titre-evenement">Classement Général</h1>·                            
                                         <div class="media-body">
                                             <div class="table-responsive text-nowrap">
                                                 <table class="table table-condensed table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Pseudo</th>
-                                                            <th>NOM</th>
+                                                            <th width="33%">Pseudo</th>
+                                                            <th width="33%">NOM</th>
                                                             
-                                                            <th>Points</th>
+                                                            <th width="33%">Points</th>
                                                             
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <?php foreach ($playersList AS $player) { ?>
+                                                        <?php foreach ($playersListForRanking AS $player) { ?>
                                                             <tr>
                                                                 <td class="text-center"><?= $player->alias; ?></td>
                                                                 <td class="text-center"><?= $player->lastname . ' ' . $player->firstname; ?></td>
-                                                               
-                                                                <td class="text-center text-info"> 0</td>
+                                                                
+                                                                <td class="text-center text-info">0</td>
                                                                 
                                                             </tr>
                                                         <?php } ?>

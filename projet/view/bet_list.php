@@ -28,7 +28,8 @@ require '../template/header.php';
                                             <p class="matchDate"><?= $bet->date; ?> <?= $bet->hour; ?></p>
                                             <p><?= $bet->team_a . ' ' . $bet->bet_team_a; ?> - <?= $bet->bet_team_b . ' ' . $bet->team_b; ?></p>
                                             <p>Enregistré le <?= $bet->dateBet; ?> <?= $bet->hourBet; ?></p>                                           
-                                            <a role="button" href="bet_update.php?id=<?= $bet->id_ranking; ?>" class="betButton validateBet btn btn-danger"><i class="fas fa-undo-alt"></i> Modifier</a>                                            
+                                            <a role="button" href="bet_update.php?id=<?= $bet->id_ranking; ?>" class="betButton validateBet btn btn-primary"><i class="fas fa-undo-alt"></i> Modifier</a>                                            
+                                            <a role="button" href="bet_delete.php?id=<?= $bet->id_ranking; ?>" class="betButton validateBet btn btn-danger"><i class="fas fa-undo-alt"></i> Supprimer</a>
                                         <?php } ?>
                                     </div>
                                 </div>  

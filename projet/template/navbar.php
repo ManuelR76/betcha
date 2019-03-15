@@ -21,7 +21,7 @@ require '../controller/controller_logout.php';
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle waves-effect waves-light naviguation" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pronostics</a>
-                <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu dropdown-info" id="second-nav" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item waves-effect waves-light" href="bet.php">Pronostiquer</a>
                     <a class="dropdown-item waves-effect waves-light" href="bet_list.php">Voir mes paris</a>
                 </div>
@@ -29,18 +29,14 @@ require '../controller/controller_logout.php';
             <li class="nav-item">
                 <a href="scores.php" class="nav-link waves-effect waves-light naviguation">Scores</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle waves-effect waves-light naviguation" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Classement</a>
-                <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item waves-effect waves-light" href="#">Classement Général</a>
-                    <a class="dropdown-item waves-effect waves-light" href="#">Classement par Journée</a>
-                </div>
+            <li class="nav-item">
+                <a href="ranking.php" class="nav-link waves-effect waves-light naviguation">Classement</a>                
             </li>
             <li class="nav-item">
                 <a href="rules.php" class="nav-link waves-effect waves-light naviguation">Réglement</a>
             </li>
             <li class="alias mt-3 ml-3 mr-3">
-                <a href="profil.php" id="profilLink" title="Voir mon profil" data-toggle="tooltip" data-placement="bottom"><?= $_SESSION['userInfo']->alias . ' '; ?><i class="fas fa-user"></i></a>               
+                <a href="profil.php" id="profilLink" title="Voir mon profil" data-placement="bottom"><?= $_SESSION['userInfo']->alias . ' '; ?><i class="fas fa-user"></i></a>               
             </li>
             <li>
                 <button name="logoutModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal"><i class="fas fa-sign-out-alt"></i> Déconnexion</button>

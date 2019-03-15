@@ -3,7 +3,7 @@
 //on crée une class database
 class database {
 
-    //on crée un attribut $DataBase qui sera disponible dans ses enfants car on la mis en public
+    //on crée un attribut $DataBase qui sera disponible dans ses enfants car on l'a mis en public
     public $DataBase;
 
     //on crée la méthode magique __construct pour se connecter à la base de donnée mySQL

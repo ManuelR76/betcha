@@ -132,7 +132,9 @@ class bet_user extends database {
     }
 
     public function getPlayersList() {
-        $query = 'SELECT * FROM `bet_user` ORDER BY `lastname`';
+        $query = 'SELECT * '
+                . 'FROM `bet_user` '
+                . 'ORDER BY `lastname`';
         $result = $this->DataBase->query($query);
         $data = $result->fetchAll(PDO::FETCH_OBJ);
         return $data;
